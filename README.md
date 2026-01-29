@@ -78,3 +78,4 @@ config.vm.provision "shell", inline: <<-SHELL
 * [Vagrant Cookbook - Second Edition](https://leanpub.com/vagrantcookbook) 、[Vagrant Cookbook - First Edition](https://1lib.us/book/2610987/b56779?id=2610987&secret=b56779&dsource=recommend)
 * [熟练使用vagrant](https://www.junmajinlong.com/virtual/index/#vagrant)
 * <https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub>
+* <https://documentation.ubuntu.com/public-images/public-images-explanation/vagrant/>
