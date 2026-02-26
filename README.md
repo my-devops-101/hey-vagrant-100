@@ -8,10 +8,9 @@
 
 ### macOS
 
-`Ventura`、`Monterey`
-
 ```bash
-brew install vagrant
+brew tap hashicorp/tap
+brew install hashicorp/tap/hashicorp-vagrant
 ```
 
 ### Ubuntu
