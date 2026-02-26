@@ -1,0 +1,28 @@
+---
+- hosts: all
+  become: yes
+  vars:
+    domain: https://apt.releases.hashicorp.com
+    keyring: /usr/share/keyrings/hashicorp-archive-keyring.gpg
+
+
+  tasks:
+    - name: Add Vagrant Key
+      apt_key:
+        url: "{{ domain }}/gpg"
+        keyring: "{{ keyring }}"
+        state: present
+
+
+    - name: Add Vagrant Repo
+      apt_repository:
+        repo: "{{ item }}"
+        state: present
+        filename: hashicorp
+      with_items:
+        - deb [arch=amd64 signed-by={{ keyring }}] {{ domain }} {{ ansible_facts["distribution_release"] }} main
+    
+    - name: Install Vagrant
+      apt:
+        name: vagrant
+        state: present

@@ -13,26 +13,6 @@ brew tap hashicorp/tap
 brew install hashicorp/tap/hashicorp-vagrant
 ```
 
-### Ubuntu
-
-`22.04`
-
-```bash
-name=/etc/apt/sources.list.d/hashicorp.list
-keyrings=/usr/share/keyrings/hashicorp-archive-keyring.gpg
-
-sudo apt-get update && sudo apt-get install -y lsb-release wget
-
-wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor --yes --output ${keyrings}
-echo "deb [signed-by=${keyrings}] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee ${name}
-sudo apt update && sudo apt install -y vagrant
-```
-
-```bash
-sudo rm -f ${name}
-```
-
-
 
 ## SSH Settings
 
