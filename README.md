@@ -25,6 +25,14 @@ config.ssh.forward_x11 = true
 
 
 
+## Network
+
+```ruby
+config.vm.network "public_network", bridge: "eno2", ip: "192.168.100.32"
+```
+
+
+
 ## Provisioning
 
 > `cloud-init`: <https://github.com/hashicorp/vagrant/issues/5571#issuecomment-120430700>
